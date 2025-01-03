@@ -18,7 +18,7 @@ function App() {
       alert("유저 이름을 입력하지 않으면, 접속이 어려워요")
       return
     }
-    const _socket = io("http://localhost:3000", {
+    const _socket = io("https://sockettest-7zow.onrender.com", {
       autoConnect: false,
       query: {
         username: username, //username

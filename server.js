@@ -10,11 +10,12 @@ app.use(cors())
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: ["https://sockettest-7zow.onrender.com", "http://localhost:5173"],
     // allowedHeaders: "*",
     credentials: true,
   },
 })
+
 
 app.get("/message", (_, res) => res.send("Hello from express!")) //message 가져왔을 때
 //client측 에서
